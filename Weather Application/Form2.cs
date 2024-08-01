@@ -50,12 +50,12 @@ namespace WeatherApp
             {
                 var weatherList = data.List;
 
-                // Lấy dự báo cho 6 ngày tiếp theo
+                // Lấy dự báo cho 5 ngày tiếp theo
                 var forecasts = weatherList
                     .GroupBy(x => DateTime.Parse(x.DtTxt).Date)
                     .Select(g => g.First())
                     .Skip(1)  // Bỏ qua ngày hôm nay
-                    .Take(6)  // Lấy 6 ngày tiếp theo
+                    .Take(5)  // Lấy 5 ngày tiếp theo
                     .ToList();
 
                 if (forecasts.Count > 0)
@@ -171,27 +171,32 @@ namespace WeatherApp
                     .GroupBy(x => DateTime.Parse(x.DtTxt).Date)
                     .Select(g => g.First())
                     .Skip(1)  // Bỏ qua ngày hôm nay
-                    .Take(6)  // Lấy 6 ngày tiếp theo
+                    .Take(5)  // Lấy 5 ngày tiếp theo
                     .ToList();
 
+                // Kiểm tra nếu danh sách dự báo (forecasts) có phần tử tại vị trí index
                 if (forecasts.Count > index)
                 {
+                    // Lấy chi tiết dự báo tại vị trí index
                     var weatherDetails = forecasts[index];
 
+                    // Tạo đối tượng Form3 với các tham số từ weatherDetails
                     Form3 form = new Form3(
-                        weatherDetails.DtTxt,
-                        weatherDetails.Main.TempMin.ToString("F1"),
-                        weatherDetails.Main.TempMax.ToString("F1"),
-                        weatherDetails.Main.Pressure.ToString(),
-                        weatherDetails.Wind.Speed.ToString(),
-                        weatherDetails.Main.Humidity.ToString(),
-                        weatherDetails.Weather[0].Description,
-                        weatherDetails.Weather[0].Icon,
-                        weatherDetails.Wind.Gust?.ToString("0.00") ?? "N/A",
-                        weatherDetails.Rain?.Rain3h?.ToString("0.0") ?? "N/A"
+                        weatherDetails.DtTxt,  // Thời gian dự báo
+                        weatherDetails.Main.TempMin.ToString("F1"),  // Nhiệt độ thấp nhất, định dạng một chữ số sau dấu thập phân
+                        weatherDetails.Main.TempMax.ToString("F1"),  // Nhiệt độ cao nhất, định dạng một chữ số sau dấu thập phân
+                        weatherDetails.Main.Pressure.ToString(),  // Áp suất
+                        weatherDetails.Wind.Speed.ToString(),  // Tốc độ gió
+                        weatherDetails.Main.Humidity.ToString(),  // Độ ẩm
+                        weatherDetails.Weather[0].Description,  // Mô tả thời tiết
+                        weatherDetails.Weather[0].Icon,  // Icon thời tiết
+                        weatherDetails.Wind.Gust?.ToString("0.00") ?? "N/A",  // Tốc độ gió giật, định dạng hai chữ số sau dấu thập phân hoặc "N/A" nếu không có giá trị
+                        weatherDetails.Rain?.Rain3h?.ToString("0.0") ?? "N/A"  // Lượng mưa trong 3 giờ, định dạng một chữ số sau dấu thập phân hoặc "N/A" nếu không có giá trị
                     );
+                    // Hiển thị form mới
                     form.Show();
                 }
+
             }
         }
 

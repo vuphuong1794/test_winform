@@ -280,7 +280,7 @@ namespace WeatherApp
             HideControls();
             this.Size = new Size(791, 140); // Set initial small size
         }
-
+                
         private void tbCity_TextChanged(object sender, EventArgs e)
         {
             // Optional: Add logic to handle text changes in the city name textbox
@@ -299,6 +299,11 @@ namespace WeatherApp
         }
 
         private void lb02_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lab_tieude_Click(object sender, EventArgs e)
         {
 
         }

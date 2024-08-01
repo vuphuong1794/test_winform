@@ -66,9 +66,7 @@ namespace AppWeather
 
         }
 
-        public Form3(string date, string mintemp, string maxtemp, string pressure, string wind, string humidity
-            , string message, string picture, string gust, string rain
-            )
+        public Form3(string date, string mintemp, string maxtemp, string pressure, string wind, string humidity, string message, string picture, string gust, string rain)
         {
             InitializeComponent();
             this.date = date;
@@ -79,8 +77,6 @@ namespace AppWeather
             this.humidity = humidity;
             this.message = message;
             this.picture = picture;
-            //this.sunrise = sunrise;
-            //this.sunset = sunset;
             this.gust = gust;
             this.rain = rain;
 
@@ -102,8 +98,6 @@ namespace AppWeather
             descriptionLabel.Text = message.ToUpper();
             string img = "http://openweathermap.org/img/w/" + picture + ".png";
             pic_icon.Load(img);
-            //sunrisetext.Text = DateTimeOffset.FromUnixTimeSeconds(sunrise).ToString("yyyy-MM-dd HH:mm");
-            //sunsettext.Text = DateTimeOffset.FromUnixTimeSeconds(sunset).ToString("yyyy-MM-dd HH:mm");
             windGust.Text = gust + " m/s";
             luongmua.Text = rain + " mm";
         }
