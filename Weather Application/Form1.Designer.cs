@@ -62,8 +62,8 @@
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_close.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(745, 0);
-            this.btn_close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_close.Location = new System.Drawing.Point(756, 0);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(2);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(46, 30);
             this.btn_close.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.tbCity.BackColor = System.Drawing.SystemColors.MenuBar;
             this.tbCity.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCity.Location = new System.Drawing.Point(257, 64);
-            this.tbCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCity.Margin = new System.Windows.Forms.Padding(2);
             this.tbCity.Name = "tbCity";
             this.tbCity.Size = new System.Drawing.Size(320, 30);
             this.tbCity.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.btn_search.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.ForeColor = System.Drawing.Color.AliceBlue;
             this.btn_search.Location = new System.Drawing.Point(577, 64);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(105, 30);
             this.btn_search.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.pic_icon.BackColor = System.Drawing.Color.Transparent;
             this.pic_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_icon.Location = new System.Drawing.Point(54, 119);
-            this.pic_icon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_icon.Margin = new System.Windows.Forms.Padding(2);
             this.pic_icon.Name = "pic_icon";
             this.pic_icon.Size = new System.Drawing.Size(155, 140);
             this.pic_icon.TabIndex = 6;
@@ -161,6 +161,7 @@
             // 
             this.lb02.AutoSize = true;
             this.lb02.BackColor = System.Drawing.Color.Transparent;
+            this.lb02.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.lb02.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.lb02.ForeColor = System.Drawing.Color.Black;
             this.lb02.Location = new System.Drawing.Point(7, 104);
@@ -169,6 +170,7 @@
             this.lb02.Size = new System.Drawing.Size(230, 32);
             this.lb02.TabIndex = 19;
             this.lb02.Text = "Thời tiết hiện tại";
+            this.lb02.Click += new System.EventHandler(this.lb02_Click);
             // 
             // lab_chitiet
             // 
@@ -374,7 +376,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(791, 512);
+            this.ClientSize = new System.Drawing.Size(800, 455);
             this.Controls.Add(this.lab_thoigian);
             this.Controls.Add(this.btn_chitiet01);
             this.Controls.Add(this.lab_nhietdo);
@@ -398,7 +400,7 @@
             this.Controls.Add(this.lb01);
             this.Controls.Add(this.tbCity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WeatherApp";

@@ -14,7 +14,7 @@ namespace WeatherApp
         private WeatherInfo.Root data;
         private string cityName;
         private const string APIKey = "4359ef1cd11b4c97b0da50cce76d01e7";
-        //4359ef1cd11b4c97b0da50cce76d01e7
+
         public Form2(string City)
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace WeatherApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error retrieving weather data: {ex.Message}");
+                MessageBox.Show($"Lỗi khi lấy dữ liệu thời tiết: {ex.Message}");
             }
         }
 
@@ -50,12 +50,12 @@ namespace WeatherApp
             {
                 var weatherList = data.List;
 
-                // Lấy dự báo cho 3 ngày tiếp theo
+                // Lấy dự báo cho 6 ngày tiếp theo
                 var forecasts = weatherList
                     .GroupBy(x => DateTime.Parse(x.DtTxt).Date)
                     .Select(g => g.First())
                     .Skip(1)  // Bỏ qua ngày hôm nay
-                    .Take(3)  // Lấy 3 ngày tiếp theo
+                    .Take(6)  // Lấy 6 ngày tiếp theo
                     .ToList();
 
                 if (forecasts.Count > 0)
@@ -90,29 +90,34 @@ namespace WeatherApp
                     detalisBtn3.Visible = true;
                 }
 
-
-
-                if (forecasts.Count > 5)
+                if (forecasts.Count > 3)
                 {
-                    dateLabel3.Text = DateTime.Parse(forecasts[5].DtTxt).ToString("dd/MM/yyyy");
-                    TemperatureLabel3.Text = forecasts[2].Main.Temp.ToString("F1") + " °C";
-                    string imgUrl3 = "http://openweathermap.org/img/w/" + forecasts[5].Weather[0].Icon + ".png";
-                    LoadImage(weatherIconBox6, imgUrl6);
-                    dateLabel6.Visible = true;
-                    TemperatureLabel6.Visible = true;
-                    weatherIconBox6.Visible = true;
-                    detalisBtn6.Visible = true;
+                    dateLabel4.Text = DateTime.Parse(forecasts[3].DtTxt).ToString("dd/MM/yyyy");
+                    TemperatureLabel4.Text = forecasts[3].Main.Temp.ToString("F1") + " °C";
+                    string imgUrl4 = "http://openweathermap.org/img/w/" + forecasts[3].Weather[0].Icon + ".png";
+                    LoadImage(weatherIconBox4, imgUrl4);
+                    dateLabel4.Visible = true;
+                    TemperatureLabel4.Visible = true;
+                    weatherIconBox4.Visible = true;
+                    detalisBtn4.Visible = true;
                 }
 
-                /* // Hiển thị tên thành phố (nếu có)
-                 if (data.City != null)
-                 {
-                     label1.Text = data.City.Name;
-                 }*/
+                if (forecasts.Count > 4)
+                {
+                    dateLabel5.Text = DateTime.Parse(forecasts[4].DtTxt).ToString("dd/MM/yyyy");
+                    TemperatureLabel5.Text = forecasts[4].Main.Temp.ToString("F1") + " °C";
+                    string imgUrl5 = "http://openweathermap.org/img/w/" + forecasts[4].Weather[0].Icon + ".png";
+                    LoadImage(weatherIconBox5, imgUrl5);
+                    dateLabel5.Visible = true;
+                    TemperatureLabel5.Visible = true;
+                    weatherIconBox5.Visible = true;
+                    detalisBtn5.Visible = true;
+                }
+
             }
             else
             {
-                MessageBox.Show("Weather data is not available.");
+                MessageBox.Show("Dữ liệu thời tiết không khả dụng.");
             }
         }
 
@@ -142,6 +147,17 @@ namespace WeatherApp
         {
             ShowDetails(2);
         }
+
+        private void detalisBtn4_Click(object sender, EventArgs e)
+        {
+            ShowDetails(3);
+        }
+
+        private void detalisBtn5_Click(object sender, EventArgs e)
+        {
+            ShowDetails(4);
+        }
+
         private void detalisBtn6_Click(object sender, EventArgs e)
         {
             ShowDetails(5);
@@ -178,6 +194,7 @@ namespace WeatherApp
                 }
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Close();

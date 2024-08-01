@@ -297,5 +297,10 @@ namespace WeatherApp
         {
             // Optional: Add logic for icon click event if needed
         }
+
+        private void lb02_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
