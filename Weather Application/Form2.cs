@@ -90,6 +90,20 @@ namespace WeatherApp
                     detalisBtn3.Visible = true;
                 }
 
+
+
+                if (forecasts.Count > 5)
+                {
+                    dateLabel3.Text = DateTime.Parse(forecasts[5].DtTxt).ToString("dd/MM/yyyy");
+                    TemperatureLabel3.Text = forecasts[2].Main.Temp.ToString("F1") + " °C";
+                    string imgUrl3 = "http://openweathermap.org/img/w/" + forecasts[5].Weather[0].Icon + ".png";
+                    LoadImage(weatherIconBox6, imgUrl6);
+                    dateLabel6.Visible = true;
+                    TemperatureLabel6.Visible = true;
+                    weatherIconBox6.Visible = true;
+                    detalisBtn6.Visible = true;
+                }
+
                 /* // Hiển thị tên thành phố (nếu có)
                  if (data.City != null)
                  {

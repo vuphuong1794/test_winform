@@ -68,3 +68,18 @@ E:\trong\test\CSharp-winform-weatherApp\Weather Application\obj\Debug\Weather Ap
 E:\trong\test\CSharp-winform-weatherApp\Weather Application\obj\Debug\Weather .F6EF7EE9.Up2Date
 E:\trong\test\CSharp-winform-weatherApp\Weather Application\obj\Debug\Weather Application.exe
 E:\trong\test\CSharp-winform-weatherApp\Weather Application\obj\Debug\Weather Application.pdb
+D:\git\tmp\test_winform\Weather Application\bin\Debug\Weather Application.exe.config
+D:\git\tmp\test_winform\Weather Application\bin\Debug\Weather Application.exe
+D:\git\tmp\test_winform\Weather Application\bin\Debug\Weather Application.pdb
+D:\git\tmp\test_winform\Weather Application\bin\Debug\Newtonsoft.Json.dll
+D:\git\tmp\test_winform\Weather Application\bin\Debug\Newtonsoft.Json.xml
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather Application.csproj.AssemblyReference.cache
+D:\git\tmp\test_winform\Weather Application\obj\Debug\WeatherApp.Form1.resources
+D:\git\tmp\test_winform\Weather Application\obj\Debug\WeatherApp.Form2.resources
+D:\git\tmp\test_winform\Weather Application\obj\Debug\AppWeather.Form3.resources
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather_Application.Properties.Resources.resources
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather Application.csproj.GenerateResource.cache
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather Application.csproj.CoreCompileInputs.cache
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather .F6EF7EE9.Up2Date
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather Application.exe
+D:\git\tmp\test_winform\Weather Application\obj\Debug\Weather Application.pdb
