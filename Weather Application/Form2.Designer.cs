@@ -60,6 +60,7 @@
             // temperatureLabel1
             // 
             this.temperatureLabel1.AutoSize = true;
+            this.temperatureLabel1.BackColor = System.Drawing.Color.Transparent;
             this.temperatureLabel1.Font = new System.Drawing.Font("Book Antiqua", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.temperatureLabel1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.temperatureLabel1.Location = new System.Drawing.Point(206, 67);
@@ -104,6 +105,7 @@
             // temperatureLabel2
             // 
             this.temperatureLabel2.AutoSize = true;
+            this.temperatureLabel2.BackColor = System.Drawing.Color.Transparent;
             this.temperatureLabel2.Font = new System.Drawing.Font("Book Antiqua", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.temperatureLabel2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.temperatureLabel2.Location = new System.Drawing.Point(206, 194);
@@ -148,6 +150,7 @@
             // TemperatureLabel3
             // 
             this.TemperatureLabel3.AutoSize = true;
+            this.TemperatureLabel3.BackColor = System.Drawing.Color.Transparent;
             this.TemperatureLabel3.Font = new System.Drawing.Font("Book Antiqua", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TemperatureLabel3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.TemperatureLabel3.Location = new System.Drawing.Point(206, 335);
@@ -212,46 +215,51 @@
             // 
             // detalisBtn1
             // 
+            this.detalisBtn1.BackColor = System.Drawing.Color.Transparent;
             this.detalisBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalisBtn1.Location = new System.Drawing.Point(323, 71);
             this.detalisBtn1.Name = "detalisBtn1";
             this.detalisBtn1.Size = new System.Drawing.Size(75, 23);
             this.detalisBtn1.TabIndex = 38;
             this.detalisBtn1.Text = "Chi tiết";
-            this.detalisBtn1.UseVisualStyleBackColor = true;
+            this.detalisBtn1.UseVisualStyleBackColor = false;
             this.detalisBtn1.Click += new System.EventHandler(this.detalisBtn1_Click);
             // 
             // detalisBtn2
             // 
+            this.detalisBtn2.BackColor = System.Drawing.Color.Transparent;
             this.detalisBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalisBtn2.Location = new System.Drawing.Point(323, 198);
             this.detalisBtn2.Name = "detalisBtn2";
             this.detalisBtn2.Size = new System.Drawing.Size(75, 23);
             this.detalisBtn2.TabIndex = 39;
             this.detalisBtn2.Text = "Chi tiết";
-            this.detalisBtn2.UseVisualStyleBackColor = true;
+            this.detalisBtn2.UseVisualStyleBackColor = false;
             this.detalisBtn2.Click += new System.EventHandler(this.detalisBtn2_Click);
             // 
             // detalisBtn3
             // 
+            this.detalisBtn3.BackColor = System.Drawing.Color.Transparent;
             this.detalisBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalisBtn3.Location = new System.Drawing.Point(323, 335);
             this.detalisBtn3.Name = "detalisBtn3";
             this.detalisBtn3.Size = new System.Drawing.Size(75, 23);
             this.detalisBtn3.TabIndex = 40;
             this.detalisBtn3.Text = "Chi tiết";
-            this.detalisBtn3.UseVisualStyleBackColor = true;
+            this.detalisBtn3.UseVisualStyleBackColor = false;
             this.detalisBtn3.Click += new System.EventHandler(this.detalisBtn3_Click);
             // 
             // detalisBtn6
             // 
+            this.detalisBtn6.BackColor = System.Drawing.Color.Transparent;
             this.detalisBtn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detalisBtn6.Location = new System.Drawing.Point(730, 335);
             this.detalisBtn6.Name = "detalisBtn6";
             this.detalisBtn6.Size = new System.Drawing.Size(75, 23);
             this.detalisBtn6.TabIndex = 45;
             this.detalisBtn6.Text = "Chi tiết";
-            this.detalisBtn6.UseVisualStyleBackColor = true;
+            this.detalisBtn6.UseVisualStyleBackColor = false;
+            this.detalisBtn6.Click += new System.EventHandler(this.detalisBtn3_Click);
             // 
             // label2
             // 

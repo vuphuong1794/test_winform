@@ -142,6 +142,10 @@ namespace WeatherApp
         {
             ShowDetails(2);
         }
+        private void detalisBtn6_Click(object sender, EventArgs e)
+        {
+            ShowDetails(5);
+        }
 
         private void ShowDetails(int index)
         {
@@ -151,7 +155,7 @@ namespace WeatherApp
                     .GroupBy(x => DateTime.Parse(x.DtTxt).Date)
                     .Select(g => g.First())
                     .Skip(1)  // Bỏ qua ngày hôm nay
-                    .Take(3)  // Lấy 3 ngày tiếp theo
+                    .Take(6)  // Lấy 6 ngày tiếp theo
                     .ToList();
 
                 if (forecasts.Count > index)
