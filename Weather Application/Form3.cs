@@ -66,21 +66,26 @@ namespace AppWeather
 
         }
 
+        // Hàm khởi tạo cho Form3 với các tham số bao gồm ngày, nhiệt độ thấp nhất, nhiệt độ cao nhất,
+        // áp suất, gió, độ ẩm, thông điệp, hình ảnh, gió giật và mưa
         public Form3(string date, string mintemp, string maxtemp, string pressure, string wind, string humidity, string message, string picture, string gust, string rain)
         {
+            // Gọi hàm khởi tạo của form
             InitializeComponent();
-            this.date = date;
-            this.mintemp = mintemp;
-            this.maxtemp = maxtemp;
-            this.pressure = pressure;
-            this.wind = wind;
-            this.humidity = humidity;
-            this.message = message;
-            this.picture = picture;
-            this.gust = gust;
-            this.rain = rain;
 
+            // Gán giá trị của các tham số truyền vào cho các biến tương ứng trong lớp
+            this.date = date;         // Ngày
+            this.mintemp = mintemp;   // Nhiệt độ thấp nhất
+            this.maxtemp = maxtemp;   // Nhiệt độ cao nhất
+            this.pressure = pressure; // Áp suất
+            this.wind = wind;         // Gió
+            this.humidity = humidity; // Độ ẩm
+            this.message = message;   // Thông điệp
+            this.picture = picture;   // Hình ảnh
+            this.gust = gust;         // Gió giật
+            this.rain = rain;         // Mưa
         }
+
 
         private void Form3_Load(object sender, EventArgs e)
         {

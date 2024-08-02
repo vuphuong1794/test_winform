@@ -66,17 +66,30 @@ namespace WeatherApp
                     LoadImage(weatherIconBox1, imgUrl1);
                 }
 
+                // Kiểm tra nếu danh sách dự báo (forecasts) có nhiều hơn 1 phần tử
                 if (forecasts.Count > 1)
                 {
+                    // Gán giá trị cho nhãn (label) ngày thứ hai với định dạng "dd/MM/yyyy"
                     dateLabel2.Text = DateTime.Parse(forecasts[1].DtTxt).ToString("dd/MM/yyyy");
+
+                    // Gán giá trị cho nhãn nhiệt độ thứ hai, định dạng số với 1 chữ số thập phân và thêm đơn vị "°C"
                     temperatureLabel2.Text = forecasts[1].Main.Temp.ToString("F1") + " °C";
+
+                    // Tạo URL của hình ảnh thời tiết dựa trên mã icon của dự báo
                     string imgUrl2 = "http://openweathermap.org/img/w/" + forecasts[1].Weather[0].Icon + ".png";
+
+                    // Gọi hàm LoadImage để tải hình ảnh từ URL vào ô hình ảnh thứ hai (weatherIconBox2)
                     LoadImage(weatherIconBox2, imgUrl2);
+
+                    // Hiển thị các nhãn và ô hình ảnh thứ hai (label và picture box)
                     dateLabel2.Visible = true;
                     temperatureLabel2.Visible = true;
                     weatherIconBox2.Visible = true;
+
+                    // Hiển thị nút chi tiết thứ hai (details button)
                     detalisBtn2.Visible = true;
                 }
+
 
                 if (forecasts.Count > 2)
                 {
