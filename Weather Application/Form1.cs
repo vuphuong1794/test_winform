@@ -166,14 +166,14 @@ namespace WeatherApp
         {
             try
             {
-                using (WebClient webClient = new WebClient())
+                using (WebClient webClient = new WebClient()) // Tạo một instance mới của WebClient
                 {
-                    byte[] imageBytes = webClient.DownloadData(url);
-                    using (MemoryStream stream = new MemoryStream(imageBytes))
+                    byte[] imageBytes = webClient.DownloadData(url); // Tải dữ liệu hình ảnh từ URL đã chỉ định
+                    using (MemoryStream stream = new MemoryStream(imageBytes)) // Tạo một instance MemoryStream với dữ liệu đã tải về
                     {
-                        using (Image originalImage = Image.FromStream(stream))
+                        using (Image originalImage = Image.FromStream(stream)) // Tạo một hình ảnh từ MemoryStream
                         {
-                            // Resize the image to fit the PictureBox
+                            // Thay đổi kích thước hình ảnh để phù hợp với PictureBox
                             pic_icon.Image = ResizeImage(originalImage, pic_icon.Width, pic_icon.Height);
                         }
                     }
@@ -181,9 +181,10 @@ namespace WeatherApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading image: " + ex.Message);
+                MessageBox.Show("Error loading image: " + ex.Message); // Hiển thị thông báo lỗi nếu có sự cố
             }
         }
+
 
         private Image ResizeImage(Image image, int width, int height)
         {
