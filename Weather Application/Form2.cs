@@ -136,15 +136,16 @@ namespace WeatherApp
 
         private void LoadImage(PictureBox pictureBox, string url)
         {
-            using (WebClient client = new WebClient())
+            using (WebClient client = new WebClient()) // Tạo một instance mới của WebClient
             {
-                byte[] imageData = client.DownloadData(url);
-                using (var ms = new System.IO.MemoryStream(imageData))
+                byte[] imageData = client.DownloadData(url); // Tải dữ liệu hình ảnh từ URL đã chỉ định
+                using (var ms = new System.IO.MemoryStream(imageData)) // Tạo một instance MemoryStream với dữ liệu đã tải về
                 {
-                    pictureBox.Image = Image.FromStream(ms);
+                    pictureBox.Image = Image.FromStream(ms); // Tải hình ảnh từ MemoryStream vào PictureBox
                 }
             }
         }
+
 
         private void detalisBtn1_Click(object sender, EventArgs e)
         {
